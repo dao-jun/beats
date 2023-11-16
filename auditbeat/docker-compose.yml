@@ -14,6 +14,7 @@ services:
       - KIBANA_PORT=5601
     volumes:
       - ${PWD}/..:/go/src/github.com/elastic/beats/
+      - /sys/kernel/tracing/:/sys/kernel/tracing/
     command: make
     privileged: true
     pid: host
